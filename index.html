@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#110c10">
+<meta name="description" content="Iulia Roshior: photo books, calendars and print design.">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; frame-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>Iulia Roshior — Portfolio</title>
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Jost:wght@400;500&display=swap">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip" href="#work">Skip to work</a>
+
+<!-- Sticky header: logo + primary navigation -->
+<header class="bar">
+  <a class="logo" href="#top" aria-label="Iulia Roshior, back to top">
+    <span class="mark" aria-hidden="true">IR</span><span class="word">Iulia Roshior</span>
+  </a>
+  <nav aria-label="Primary"><a href="#work">Work</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
+</header>
+
+<main id="top">
+<!-- Introduction -->
+<section class="hero wrap">
+  <p class="eyebrow">Portfolio · 2026</p>
+  <h1>Soft edges,<br><em>sharp</em> thinking.</h1>
+  <p class="lead">Photo books, calendars and print layouts.</p>
+  <a class="btn" href="#work">View selected work</a>
+</section>
+
+<!-- Projects / Portfolio -->
+<section id="work" class="wrap" aria-labelledby="work-title">
+  <p class="eyebrow">Selected work</p>
+  <h2 id="work-title">Print</h2>
+  <div class="tools">
+    <div class="group" id="views" role="group" aria-label="Layout">
+      <button class="chip" type="button" data-view="grid" aria-pressed="true">Grid</button>
+      <button class="chip" type="button" data-view="index" aria-pressed="false">List</button>
+    </div>
+  </div>
+  <p class="hint"><span id="count" role="status"></span> · <span id="hint">Drag to explore, click to preview</span></p>
+</section>
+<div class="gallery" id="gallery">
+  <button class="gallery-arrow gallery-arrow--prev"
+          id="grid-prev" type="button"
+          aria-label="Previous works" aria-controls="grid">
+    <svg viewBox="0 0 64 64" aria-hidden="true">
+      <path d="M39 12 19 32l20 20"/>
+    </svg>
+  </button>
+
+  <ul class="track" id="grid" aria-label="Works, grid view"></ul>
+
+  <button class="gallery-arrow gallery-arrow--next"
+          id="grid-next" type="button"
+          aria-label="Next works" aria-controls="grid">
+    <svg viewBox="0 0 64 64" aria-hidden="true">
+      <path d="m25 12 20 20-20 20"/>
+    </svg>
+  </button>
+</div>
+<div class="wrap"><ol class="rows" id="index" aria-label="Works, index view" hidden></ol></div>
+<img class="peek" id="peek" alt="" width="180" height="225">
+
+<!-- About -->
+<<section id="about" class="wrap" aria-labelledby="about-title">
+  <p class="eyebrow">About</p>
+  <h2 id="about-title">Seven years of layout craft</h2>
+
+  <div class="cols">
+    <p><strong>Layouts for every occasion.</strong> For seven years I have been designing print layouts of all kinds, from graduation albums to photo books made for printing at the print shop.</p>
+    <p><strong>One person, the whole process.</strong> I handle everything myself: the first conversation with the client, clarifying needs, every round of revisions, and preparing the files for print.</p>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="wrap" aria-labelledby="contact-title">
+  <p class="eyebrow">Contact</p>
+  <h2 id="contact-title">Let’s make something beautiful</h2>
+  <ul class="links">
+    <li><a href="mailto:rosiorulia@gmail.com">Email</a></li>
+    <li><a href="https://t.me/julieRo" target="_blank" rel="noopener noreferrer">Telegram</a></li>
+    <li><a href="https://www.linkedin.com/in/iulia-rosior-0202502bb/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+    <li><a href="https://github.com/IuliaRoshior" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+  </ul>
+</section>
+</main>
+
+<footer class="wrap"><p>© Iulia Roshior</p></footer>
+
+<!-- Work viewer: live preview inside the site -->
+<dialog id="viewer" aria-labelledby="v-title">
+  <div class="v-head">
+    <div><p class="eyebrow" id="v-meta"></p><h3 id="v-title"></h3></div>
+    <div class="v-actions">
+      <button class="chip" type="button" id="v-prev" aria-label="Previous work">←</button>
+      <button class="chip" type="button" id="v-next" aria-label="Next work">→</button>
+      <a class="chip" id="v-open" target="_blank" rel="noopener noreferrer">Open in new tab</a>
+      <button class="chip" type="button" id="v-close">Close</button>
+    </div>
+  </div>
+  <div class="v-body" id="v-body"></div>
+</dialog>
+
+<script src="js/script.js"></script>
+</body>
+</html>
