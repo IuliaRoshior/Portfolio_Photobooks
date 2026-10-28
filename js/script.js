@@ -4,12 +4,9 @@
 const CATS = { print: "Print" };
 
 /* One entry per work. Optional `cover: "assets/covers/<id>.jpg"` sets its own thumbnail; otherwise the default SVG is used. */
-const PROJECTS = [
-  { id: "sea", t: "Sea Memories", c: "print", y: 2024, k: "pdf", u: "assets/pdf/PhotoBookSea.PDF" },
-  { id: "elvira", t: "Elvira", c: "print", y: 2025, k: "pdf", u: "assets/pdf/PhotoBookElvira.PDF" },
+const PROJECTS = [ 
   { id: "aura", t: "AURA travel", c: "print", y: 2026, k: "pdf", u: "assets/pdf/AURA_Travel.pdf" },
   { id: "cream", t: "VERA", c: "print", y: 2026, k: "pdf", u: "assets/pdf/creamAdvertisement.PDF" },
-  { id: "calendar", t: "Calendario", c: "print", y: 2025, k: "pdf", u: "assets/pdf/Calendario.PDF" },
   { id: "price", t: "Price list", c: "print", y: 2025, k: "pdf", u: "assets/pdf/Винтажный шаблон фотопрайса.PDF"},
 ];
 
